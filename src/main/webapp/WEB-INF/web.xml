@@ -110,6 +110,24 @@
 			</taglib-location>
 		</taglib>
 	</jsp-config>
+	
+	<servlet>
+		<servlet-name>controlOne</servlet-name>
+		<servlet-class>tommy.mvc.control.ControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>controlOne</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>myControl</servlet-name>
+		<servlet-class>tommy.mvcMem.control.ControlServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myControl</servlet-name>
+		<url-pattern>*.mdo</url-pattern>
+	</servlet-mapping>
 
 	<error-page>
 		<error-code>404</error-code>
