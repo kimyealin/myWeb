@@ -60,8 +60,8 @@ function inputCheck(){
 		theForm.email.focus();
 		return;
 	}
-	var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-	if(regExp.test(theForm.email.value)){
+	var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-z]{2,3}$/i;
+	if (!regExp.test(theForm.email.value)) {
 		alert("잘못된 이메일 주소입니다.");
 		theForm.email.focus();
 		return;

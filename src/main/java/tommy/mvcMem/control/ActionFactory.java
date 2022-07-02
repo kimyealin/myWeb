@@ -1,7 +1,13 @@
 package tommy.mvcMem.control;
 
 import tommy.mvcMem.action.IndexAction;
+import tommy.mvcMem.action.LoginFormAction;
+import tommy.mvcMem.action.LoginProcAction;
+import tommy.mvcMem.action.LogoutAction;
+import tommy.mvcMem.action.ModifyFormAction;
+import tommy.mvcMem.action.ModifyProcAction;
 import tommy.mvcMem.action.RegFormAction;
+import tommy.mvcMem.action.RegProcAction;
 import tommy.mvcMem.action.ZipCheckAction;
 import tommy.mvcMem.action.Action;
 import tommy.mvcMem.action.IdCheckAction;
@@ -23,27 +29,27 @@ public class ActionFactory {
 		case "index":
 			action = new IndexAction();
 			break;
-//		case "login":
-//			action = new LoginFormAction();
-//			break;
-//		case "loginProc":
-//			action = new LoginProcAction();
-//			break;
-//		case "logout":
-//			action = new LogoutAction();
-//			break;
+		case "login":
+			action = new LoginFormAction();
+			break;
+		case "loginProc":
+			action = new LoginProcAction();
+			break;
+		case "logout":
+			action = new LogoutAction();
+			break;
 		case "regForm":
 			action = new RegFormAction();
 			break;
-//		case "refProc":
-//			action = new RegProcAction();
-//			break;
-//		case "modifyForm":
-//			action = new ModifyFormAction();
-//			break;
-//		case "modifyProc":
-//			action = new ModifyProcAction();
-//			break;
+		case "refProc":
+			action = new RegProcAction();
+			break;
+		case "modifyForm":
+			action = new ModifyFormAction();
+			break;
+		case "modifyProc":
+			action = new ModifyProcAction();
+			break;
 //		case "deleteForm":
 //			action = new DeleteFormAction();
 //			break;
