@@ -10,6 +10,8 @@ import tommy.mvcMem.action.RegFormAction;
 import tommy.mvcMem.action.RegProcAction;
 import tommy.mvcMem.action.ZipCheckAction;
 import tommy.mvcMem.action.Action;
+import tommy.mvcMem.action.DeleteFormAction;
+import tommy.mvcMem.action.DeleteProcAction;
 import tommy.mvcMem.action.IdCheckAction;
 
 public class ActionFactory {
@@ -41,7 +43,7 @@ public class ActionFactory {
 		case "regForm":
 			action = new RegFormAction();
 			break;
-		case "refProc":
+		case "regProc":
 			action = new RegProcAction();
 			break;
 		case "modifyForm":
@@ -50,12 +52,12 @@ public class ActionFactory {
 		case "modifyProc":
 			action = new ModifyProcAction();
 			break;
-//		case "deleteForm":
-//			action = new DeleteFormAction();
-//			break;
-//		case "deleteProc":
-//			action = new DeleteProcAction();
-//			break;
+		case "deleteForm":
+			action = new DeleteFormAction();
+			break;
+		case "deleteProc":
+			action = new DeleteProcAction();
+			break;
 		case "idCheck":
 			action = new IdCheckAction();
 			break;

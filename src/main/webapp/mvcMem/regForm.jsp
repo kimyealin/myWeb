@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>가입폼</title>
-<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="script.js"></script>
 </head>
 <body>

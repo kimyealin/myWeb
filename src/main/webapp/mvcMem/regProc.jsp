@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 확인</title>
-<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body bgcolor="#FFFFCC">
 	<c:set var="flag" value="${flag }"/>
