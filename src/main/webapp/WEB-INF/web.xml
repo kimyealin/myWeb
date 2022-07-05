@@ -145,7 +145,7 @@
 	
 	<servlet>
 		<servlet-name>Controller</servlet-name>
-		<servlet-class>tommy.board.ControllerAction</servlet-class>
+		<servlet-class>tommy.board.controller.ControllerAction</servlet-class>
 		<init-param>
 			<param-name>propertyConfig</param-name>
 			<param-value>CommandPro.properties</param-value>

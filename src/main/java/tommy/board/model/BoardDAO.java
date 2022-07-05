@@ -256,4 +256,39 @@ public class BoardDAO {
 		}
 		return result;
 	}
+	
+	//DB에서 게시물 삭제해줄 메소드
+	public int deleteArticle(int num, String pass) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String dbpasswd = "";
+		int result = -1;
+		
+		try {
+			conn = ConnUtil.getConnection();
+			pstmt = conn.prepareStatement("select pass from board where num =?");
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				dbpasswd = rs.getString("pass");
+				if(dbpasswd.equals(pass)) {
+					pstmt = conn.prepareStatement("delete from board where num=?");
+					pstmt.setInt(1, num);
+					pstmt.executeUpdate();
+					result= 1; //글 삭제 성공
+				}else {
+					result = 0; //비밀번호 틀림
+				}
+			}
+	
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}finally {
+			if(rs != null) try {rs.close();}catch(SQLException ex) {}
+			if(pstmt != null) try {pstmt.close();}catch(SQLException ex) {}
+			if(conn != null) try {conn.close();}catch(SQLException ex) {}
+		}
+		return result;
+	}
 }
